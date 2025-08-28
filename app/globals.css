@@ -1,1 +1,135 @@
 @import "tailwindcss";
+
+:root {
+  /* ------------------------------- Typography ------------------------------- */
+  /* Base tokens */
+  --px: 1px;
+  --2xs: 2px;
+  --xs: 4px;
+  --sm: 8px;
+  --ms: 12px;
+  --md: 16px;
+  --lg: 24px;
+  --xl: 32px;
+  --2xl: 48px;
+  --3xl: 64px;
+  --4xl: 128px;
+
+  --text-sm: var(--sm);
+  --text-base: var(--ms);
+  --text-md: var(--ms);
+  --text-lg: var(--md);
+  --text-xl: var(--lg);
+  --text-xxl: var(--4xl);
+
+  --prose-s: 180px;
+  --prose-m: 230px;
+  --prose-l: 320px;
+
+  /* --------------------------------- Colours -------------------------------- */
+  --neutral-50: oklch(0.99 0 0);
+  --neutral-100: oklch(0.96 0 0);
+  --neutral-200: oklch(0.89 0 0);
+  --neutral-300: oklch(0.8 0 0);
+  --neutral-400: oklch(0.73 0 0);
+  --neutral-500: oklch(0.6 0 0);
+  --neutral-600: oklch(0.46 0 0);
+  --neutral-700: oklch(0.37 0 0);
+  --neutral-800: oklch(0.29 0 0);
+  --neutral-900: oklch(0.21 0 0);
+  --neutral-950: oklch(0.18 0 0);
+}
+
+/* Medium screens tokens */
+@media (width >= 64rem) {
+  :root {
+    --px: 1px;
+    --2xs: 4px;
+    --xs: 8px;
+    --sm: 12px;
+    --ms: 16px;
+    --md: 24px;
+    --lg: 32px;
+    --xl: 48px;
+    --2xl: 64px;
+    --3xl: 96px;
+    --4xl: 160px;
+
+    --text-sm: var(--ms);
+    --text-base: 14px;
+    --text-md: var(--md);
+    --text-lg: var(--lg);
+    --text-xl: var(--xl);
+
+    --prose-s: 350px;
+    --prose-m: 435px;
+    --prose-l: 520px;
+  }
+}
+
+/* Dark mode colors */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --neutral-50: oklch(0.18 0 0);
+    --neutral-100: oklch(0.21 0 0);
+    --neutral-200: oklch(0.29 0 0);
+    --neutral-300: oklch(0.37 0 0);
+    --neutral-400: oklch(0.46 0 0);
+    --neutral-500: oklch(0.6 0 0);
+    --neutral-600: oklch(0.73 0 0);
+    --neutral-700: oklch(0.8 0 0);
+    --neutral-800: oklch(0.89 0 0);
+    --neutral-900: oklch(0.96 0 0);
+    --neutral-950: oklch(0.99 0 0);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Tailwind                                  */
+/* -------------------------------------------------------------------------- */
+@theme {
+  --spacing-2xs: var(--2xs);
+  --spacing-xs: var(--xs);
+  --spacing-sm: var(--sm);
+  --spacing-ms: var(--ms);
+  --spacing-md: var(--md);
+  --spacing-lg: var(--lg);
+  --spacing-xl: var(--xl);
+  --spacing-2xl: var(--2xl);
+  --spacing-3xl: var(--3xl);
+  --spacing-4xl: var(--4xl);
+
+  --text-sm: var(--text-sm);
+  --text-base: var(--text-base);
+  --text-md: var(--text-md);
+  --text-lg: var(--text-lg);
+  --text-xl: var(--text-xl);
+  --text-xxl: var(--text-xxl);
+
+  --container-prose-s: var(--prose-s);
+  --container-prose-m: var(--prose-m);
+  --container-prose-l: var(--prose-l);
+
+  --color-neutral-50: var(--neutral-50);
+  --color-neutral-100: var(--neutral-100);
+  --color-neutral-200: var(--neutral-200);
+  --color-neutral-300: var(--neutral-300);
+  --color-neutral-400: var(--neutral-400);
+  --color-neutral-500: var(--neutral-500);
+  --color-neutral-600: var(--neutral-600);
+  --color-neutral-700: var(--neutral-700);
+  --color-neutral-800: var(--neutral-800);
+  --color-neutral-900: var(--neutral-900);
+  --color-neutral-950: var(--neutral-950);
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 Typography                                 */
+/* -------------------------------------------------------------------------- */
+html {
+  @apply text-base font-thin font-sans text-neutral-800 bg-neutral-50;
+}
+
+a {
+  @apply underline decoration-dotted hover:text-neutral-600 active:text-neutral-400 transition;
+}
