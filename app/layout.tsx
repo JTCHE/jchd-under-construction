@@ -4,7 +4,7 @@ import copywriting from "./lib/copywriting/copywriting";
 import "./globals.css";
 
 // Cloudflare compatibility
-export const runtime = "edge";
+// export const runtime = "edge";
 
 // Dynamic metadata
 export const metadata: Metadata = {
